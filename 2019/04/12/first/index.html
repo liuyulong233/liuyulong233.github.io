@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>first | Hexo</title>
+  <title>WEBRTC实战：简单的直播项目 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Quick StartCreate a new post 创建新文章1$ hexo new &quot;My New Post&quot; More info: Writing Run server 启动服务器1$ hexo server More info: Server Generate static files 生成静态页面1$ hexo generate More info: Generating Deplo">
+  <meta name="description" content="利用webrtc实现网页版1v1的直播。本文只讲如何使用webrtc，具体的原理请参考其他文章">
+<meta name="keywords" content="h5">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first">
+<meta property="og:title" content="WEBRTC实战：简单的直播项目">
 <meta property="og:url" content="http://yoursite.com/2019/04/12/first/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Quick StartCreate a new post 创建新文章1$ hexo new &quot;My New Post&quot; More info: Writing Run server 启动服务器1$ hexo server More info: Server Generate static files 生成静态页面1$ hexo generate More info: Generating Deplo">
+<meta property="og:description" content="利用webrtc实现网页版1v1的直播。本文只讲如何使用webrtc，具体的原理请参考其他文章">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T10:38:33.389Z">
+<meta property="og:updated_time" content="2019-04-19T12:57:52.952Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="first">
-<meta name="twitter:description" content="Quick StartCreate a new post 创建新文章1$ hexo new &quot;My New Post&quot; More info: Writing Run server 启动服务器1$ hexo server More info: Server Generate static files 生成静态页面1$ hexo generate More info: Generating Deplo">
+<meta name="twitter:title" content="WEBRTC实战：简单的直播项目">
+<meta name="twitter:description" content="利用webrtc实现网页版1v1的直播。本文只讲如何使用webrtc，具体的原理请参考其他文章">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -47,7 +48,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/img/avatar.jpg" class="js-avatar">
+			<img src="/assets/img/huaji.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">刘雨陇</a></h1>
@@ -105,7 +106,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/img/avatar.jpg" class="js-avatar">
+				<img src="/assets/img/huaji.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">刘雨陇</h1>
@@ -161,7 +162,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      first
+      WEBRTC实战：简单的直播项目
     </h1>
   
 
@@ -174,13 +175,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h3 id="Create-a-new-post-创建新文章"><a href="#Create-a-new-post-创建新文章" class="headerlink" title="Create a new post 创建新文章"></a>Create a new post 创建新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server-启动服务器"><a href="#Run-server-启动服务器" class="headerlink" title="Run server 启动服务器"></a>Run server 启动服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+        <p>利用webrtc实现网页版1v1的直播。本文只讲如何使用webrtc，具体的原理请参考其他文章<br><a id="more"></a></p>
+<h1 id="一、1v1本地连接"><a href="#一、1v1本地连接" class="headerlink" title="一、1v1本地连接"></a>一、1v1本地连接</h1><h3 id="1、直播端获取媒体流"><a href="#1、直播端获取媒体流" class="headerlink" title="1、直播端获取媒体流"></a>1、直播端获取媒体流</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var localVideo = document.getElementById(&apos;localVideo&apos;);</span><br><span class="line">var getUserMedia = (navigator.getUserMedia ||</span><br><span class="line">				navigator.webkitGetUserMedia ||</span><br><span class="line">				navigator.mozGetUserMedia ||</span><br><span class="line">				navigator.msGetUserMedia);</span><br><span class="line">navigator.mediaDevices.getUserMedia(constraints).then(function(stream) &#123;</span><br><span class="line">		console.log(stream)</span><br><span class="line">		localVideo.srcObject = stream;</span><br><span class="line">		localStream = stream;</span><br><span class="line">		localVideo.onloadedmetadata = function() &#123;</span><br><span class="line">		    createPeerConnection()</span><br><span class="line">		&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="webrtc初始化"><a href="#webrtc初始化" class="headerlink" title="webrtc初始化"></a>webrtc初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var PeerConnection = (window.RTCPeerConnection ||</span><br><span class="line">				window.msRTCPeerConnection ||</span><br><span class="line">				window.webkitRTCPeerConnection ||</span><br><span class="line">				window.mozRTCPeerConnection);</span><br><span class="line">var sendpc;</span><br><span class="line">var iceServer = &#123;</span><br><span class="line">				&quot;iceServers&quot;: [&#123;</span><br><span class="line">					&quot;url&quot;: &quot;stun:stun.l.google.com:19302&quot;</span><br><span class="line">				&#125;]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files-生成静态页面"><a href="#Generate-static-files-生成静态页面" class="headerlink" title="Generate static files 生成静态页面"></a>Generate static files 生成静态页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites-部署到Github"><a href="#Deploy-to-remote-sites-部署到Github" class="headerlink" title="Deploy to remote sites 部署到Github"></a>Deploy to remote sites 部署到Github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="初始化P2P连接"><a href="#初始化P2P连接" class="headerlink" title="初始化P2P连接"></a>初始化P2P连接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function createPeerConnection() &#123;</span><br><span class="line">					var sendpc = new PeerConnection(iceServer);</span><br><span class="line">					sendpc.onicecandidate = function(e) &#123;</span><br><span class="line">				// 监听 sendpc 的ICE候选信息 如果收集到，就添加给 接收端 连接状态</span><br><span class="line">						if (e.candidate) &#123;</span><br><span class="line">							console.log(e.candidate)</span><br><span class="line">							socket.emit(&apos;candidate&apos;, e.candidate);</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;;</span><br><span class="line">             //添加接收端的ICE候选信息</span><br><span class="line">					socket.on(&apos;candidate&apos;, function(candidate) &#123;</span><br><span class="line">						sendpc.addIceCandidate(candidate);</span><br><span class="line">					&#125;)</span><br><span class="line">             //绑定媒体流</span><br><span class="line">				sendpc.addStream(localStream);</span><br><span class="line">					//直播端与接收端相互保存offer和answer信息</span><br><span class="line">					sendpc.createOffer().then(offer =&gt; &#123;</span><br><span class="line">						console.log(&quot;offer&quot;)</span><br><span class="line">						//直播端保存offer</span><br><span class="line">						sendpc.setLocalDescription(offer).then(() =&gt; &#123;</span><br><span class="line">                        //将offer发送给接收端</span><br><span class="line">							socket.emit(&apos;offer&apos;, offer);</span><br><span class="line">							socket.on(&apos;answer&apos;, function(answer) &#123;</span><br><span class="line">                         //直播端保存接收端的answer</span><br><span class="line">								sendpc.setRemoteDescription(answer);</span><br><span class="line">							&#125;)</span><br><span class="line">						&#125;)</span><br><span class="line">					&#125;);</span><br><span class="line">				&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="接收端"><a href="#接收端" class="headerlink" title="接收端"></a>接收端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">var remoteVideo = document.getElementById(&apos;remoteVideo&apos;);</span><br><span class="line">			var iceServer = &#123;</span><br><span class="line">				&quot;iceServers&quot;: [&#123;</span><br><span class="line">					&quot;url&quot;: &quot;stun:stun.l.google.com:19302&quot;</span><br><span class="line">				&#125;]</span><br><span class="line">			&#125;;</span><br><span class="line">        function createPeerConnection() &#123;</span><br><span class="line">			var recvpc = new RTCPeerConnection(iceServer);</span><br><span class="line">			recvpc.onicecandidate = function(e) &#123;</span><br><span class="line">				if (e.candidate) &#123;</span><br><span class="line">				     console.log(e.candidate)</span><br><span class="line">					socket.emit(&apos;candidate&apos;,e.candidate);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			socket.on(&apos;candidate&apos;,function(candidate)&#123;</span><br><span class="line">				recvpc.addIceCandidate(candidate);</span><br><span class="line">			&#125;)</span><br><span class="line">			//监听媒体流</span><br><span class="line">			recvpc.onaddstream = function(e) &#123;</span><br><span class="line">				console.log(&apos;stream:&apos;,e.stream)</span><br><span class="line">				remoteVideo.srcObject = e.stream;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			socket.on(&quot;offer&quot;, function(offer) &#123;</span><br><span class="line">				console.log(&quot;offer&quot;)</span><br><span class="line">				recvpc.setRemoteDescription(offer).then(() =&gt; &#123;</span><br><span class="line">					recvpc.createAnswer().then(answer =&gt; &#123;</span><br><span class="line">					    console.log(&quot;answer&quot;)</span><br><span class="line">						recvpc.setLocalDescription(answer);</span><br><span class="line">						//对方保存answer</span><br><span class="line">						socket.emit(&apos;answer&apos;,answer)</span><br><span class="line">					&#125;)</span><br><span class="line">				&#125;)</span><br><span class="line">			&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
@@ -211,7 +211,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">h5</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/实战//" class="article-tag-list-link color3">实战</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -404,6 +426,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">h5</a>
               </li>
             
             <div class="clearfix"></div>

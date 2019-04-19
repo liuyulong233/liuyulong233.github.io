@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/img/avatar.jpg" class="js-avatar">
+			<img src="/assets/img/huaji.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">刘雨陇</a></h1>
@@ -101,7 +101,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/img/avatar.jpg" class="js-avatar">
+				<img src="/assets/img/huaji.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">刘雨陇</h1>
@@ -159,7 +159,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/12/first/">first</a>
+      <a class="article-title" href="/2019/04/12/first/">WEBRTC实战：简单的直播项目</a>
     </h1>
   
 
@@ -172,23 +172,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h3 id="Create-a-new-post-创建新文章"><a href="#Create-a-new-post-创建新文章" class="headerlink" title="Create a new post 创建新文章"></a>Create a new post 创建新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server-启动服务器"><a href="#Run-server-启动服务器" class="headerlink" title="Run server 启动服务器"></a>Run server 启动服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files-生成静态页面"><a href="#Generate-static-files-生成静态页面" class="headerlink" title="Generate static files 生成静态页面"></a>Generate static files 生成静态页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites-部署到Github"><a href="#Deploy-to-remote-sites-部署到Github" class="headerlink" title="Deploy to remote sites 部署到Github"></a>Deploy to remote sites 部署到Github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <p>利用webrtc实现网页版1v1的直播。本文只讲如何使用webrtc，具体的原理请参考其他文章<br>
+        
       
 
       
-    </div>
+    </p></div>
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">h5</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/实战//" class="article-tag-list-link color3">实战</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -244,18 +259,12 @@
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>!  Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h3 id="Create-a-new-post-创建新文章"><a href="#Create-a-new-post-创建新文章" class="headerlink" title="Create a new post 创建新文章"></a>Create a new post 创建新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server-启动服务器"><a href="#Run-server-启动服务器" class="headerlink" title="Run server 启动服务器"></a>Run server 启动服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files-生成静态页面"><a href="#Generate-static-files-生成静态页面" class="headerlink" title="Generate static files 生成静态页面"></a>Generate static files 生成静态页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites-部署到Github"><a href="#Deploy-to-remote-sites-部署到Github" class="headerlink" title="Deploy to remote sites 部署到Github"></a>Deploy to remote sites 部署到Github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br>
+        
       
 
       
-    </div>
+    </p></div>
     <div class="article-info article-info-index">
       
       
@@ -398,6 +407,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">h5</a>
               </li>
             
             <div class="clearfix"></div>
