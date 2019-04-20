@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 随笔 | Hexo</title>
+  <title>前端知识点总结（JavaScript篇） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/随笔/index.html">
+  <meta name="description" content="前端知识点总结（JavaScript篇）">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识点总结（JavaScript篇）">
+<meta property="og:url" content="http://yoursite.com/2019/04/20/前端知识点总结（JavaScript篇）/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前端知识点总结（JavaScript篇）">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/04/20/前端知识点总结（JavaScript篇）/files/async-error-handling.png">
+<meta property="og:image" content="https://segmentfault.com/img/bVWhRl?w=801&h=814">
+<meta property="og:updated_time" content="2019-04-20T04:14:33.242Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="前端知识点总结（JavaScript篇）">
+<meta name="twitter:description" content="前端知识点总结（JavaScript篇）">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/20/前端知识点总结（JavaScript篇）/files/async-error-handling.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -168,60 +176,537 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-前端知识点总结（JavaScript篇）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/12/hello-world/" class="archive-article-date">
-  	<time datetime="2019-04-12T02:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/12/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      前端知识点总结（JavaScript篇）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/04/20/前端知识点总结（JavaScript篇）/" class="archive-article-date">
+  	<time datetime="2019-04-20T04:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前端知识点总结（JavaScript篇）"><a href="#前端知识点总结（JavaScript篇）" class="headerlink" title="前端知识点总结（JavaScript篇）"></a>前端知识点总结（JavaScript篇）</h1><a id="more"></a>
+<ol>
+<li><strong>同源策略及跨域请求的方法和原理（比较JSONP和document.domain的不同及优劣，以及HTML5的跨域方案）</strong></li>
+<li><strong>JavaScript数据类型</strong></li>
+<li><strong>JavaScript字符串转化</strong></li>
+<li><strong>JSONP原理及优缺点</strong></li>
+<li><strong>XMLHttpRequest</strong></li>
+<li><strong>事件委托</strong></li>
+<li><strong>前端模块化（AMD和CommonJS的原理及异同，seajs和requirejs的异同和用法）</strong></li>
+<li><strong>session</strong></li>
+<li><strong>Cookie</strong></li>
+<li><strong>seaJS的用法及原理，依赖加载的原理、初始化、实现等</strong></li>
+<li><strong>this问题</strong></li>
+<li><strong>模块化原理（作用域）</strong></li>
+<li><strong>JavaScript动画算法</strong></li>
+<li><strong>拖拽的实现</strong></li>
+<li><strong>JavaScript原型链及JavaScript如何实现继承、类的</strong></li>
+<li><strong>闭包及闭包的用处，以及闭包可能造成的不良后果。</strong></li>
+<li><strong>常见算法的JS实现（如快排、冒泡等）</strong></li>
+<li><strong>事件冒泡和事件捕获</strong></li>
+<li><strong>浏览器检测（能力检测、怪癖检测等）</strong></li>
+<li><strong>JavaScript代码测试</strong></li>
+<li><strong>call与apply的作用及不同</strong></li>
+<li><strong>bind的用法，以及如何实现bind的函数和需要注意的点</strong></li>
+<li><strong>变量名提升</strong></li>
+<li><strong>== 与 ===</strong></li>
+<li><strong>“use strict”作用</strong></li>
+<li><strong>AJAX请求的细节和原理</strong></li>
+<li><strong>函数柯里化（Currying）</strong></li>
+<li><strong>NodeJS健壮性方面的实践（子进程等）</strong></li>
+<li><strong>NodeJS能否用利用多核实现在计算性能上的劣势等</strong></li>
+<li><strong>jQuery链式调用的原理</strong></li>
+<li><strong>ES6及jQuery新引进的Promise有什么用处、Promise的原理</strong></li>
+<li><strong>NodeJS的优缺点及使用场景</strong></li>
+<li><strong>JS中random的概率问题</strong></li>
+<li><strong>客户端存储及他们的异同（例如：cookie, sessionStorage和localStorage等）</strong></li>
+<li><strong>AngularJS的文件管理及打包（包括模板打包及请求、JS的打包和请求等）</strong></li>
+<li><strong>AngularJS的JS模块管理及实践</strong></li>
+<li><strong>在你的Angular App页面里随意加一个JS文件，会有什么影响</strong></li>
+<li><strong>AngularJS directive及自己如何定义directive</strong></li>
+<li><strong>AngularJS双向绑定的原理及实现</strong></li>
+<li><strong>你如何测试你的JS代码</strong></li>
+<li><strong>DOM1\DOM2\DOM3都有什么不同</strong></li>
+<li><strong>XSS</strong></li>
+<li><strong>常用数组方法和数组算法（如数组去重、求交集、并集等）</strong></li>
+<li><strong>js数组去重复项</strong></li>
+<li><strong>js中的垃圾回收机制</strong></li>
+<li><strong>常见的JS设计模式</strong></li>
+<li><strong>js获取服务器精准时间（客户端如何与服务器时间同步）</strong></li>
+<li><strong>什么是js中的类数组对象</strong></li>
+<li><strong>Node中exports和module.exports的区别</strong></li>
+<li><strong>异步编程的了解</strong></li>
+<li><strong>Grunt和Gulp的区别</strong></li>
+<li><strong>AngularJS中service\factory\provider的区别</strong></li>
+<li><strong>JavaScript中异步编程的几种方式</strong></li>
+<li><strong>Nodejs开发踩过的坑</strong></li>
+<li><strong>AngularJS中依赖注入的理解</strong></li>
+<li><strong>JS中判断是否为数组</strong></li>
+<li><strong>Nodejs内存溢出</strong></li>
+<li><strong>关于BFC和hasLayout</strong></li>
+<li><strong>统计页面中使用最多的三个标签</strong></li>
+<li><strong>JS内存泄露及解决方法</strong></li>
+<li><strong>在浏览器地址栏按回车、F5、Ctrl+F5刷新网页的区别</strong></li>
+<li><strong>判断两个对象的相等</strong></li>
+<li><strong>选取两个数的最大公约数</strong></li>
+<li><strong>Node模块是如何寻址的</strong></li>
+<li><strong>ES6新增的特性</strong></li>
+<li><strong><code>escape()</code>, <code>decodeURIComponent()</code>, <code>decodeURI</code>之间的区别是什么？</strong></li>
+<li><strong>CSRF？</strong></li>
+<li>异步callback错误的监控</li>
+<li>jsbridge的通信方式，js与native的通信方式</li>
+<li>H5页面如何阻止第三方js执行</li>
+<li>nodejs的特点以及缺点</li>
+<li>dns劫持</li>
+<li>vuejs的数据劫持defineproperty的缺点</li>
+<li>https过程及比http多的几次握手， 为什么https耗时比http长</li>
+<li>angularjs、vue的数据绑定的实现，以及angular2之后的改进</li>
+<li>settimeout(fn 0)与Promise的执行顺序问题</li>
+<li>如何验证HTTPS证书是否过期？是否被调销了？</li>
+<li>HTTPS和HTTP链接建立时间耗时哪个长？为什么？如何优化？</li>
+<li>ping是建立在什么协议之上的？</li>
+<li>CDN有何优点？CDN是如何工作的？</li>
+<li>dom ready与window.onload的区别</li>
+<li>async与defer的区别</li>
+<li>js执行过程对dom tree和 css tree的影响</li>
+<li>发布订阅者模式与观察者模式的区别</li>
+<li>CORS</li>
+<li>Webpack HMR的实现原理</li>
+<li>VueJS如何监听数组变化?</li>
+</ol>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<ol>
+<li><p><strong>同源策略及跨域请求的方法和原理（比较JSONP和document.domain的不同及优劣，以及HTML5的跨域方案）</strong><br>答案：同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准。它最早出自Netscape Navigator2.0，其目的是防止某个文档或脚本从多个不同源装载。这里的同源指的是：同协议，同域名和同端口。这里说的js跨域是指通过js在不同的域之间进行数据传输或通信，比如用ajax向一个不同的域请求数据，或者通过js获取页面中不同域的框架中(iframe)的数据。只要协议、域名、端口有任何一个不同，都被当作是不同的域。<br>浏览器的同源策略，其限制之一就是第一种方法中我们说的不能通过ajax的方法去请求不同源中的文档。 它的第二个限制是浏览器中不同域的框架之间是不能进行js的交互操作的。有一点需要说明，不同的框架之间（父子或同辈），是能够获取到彼此的window对象的，但头疼的是你却不能使用获取到的window对象的属性和方法(html5中的postMessage方法是一个例外，还有些浏览器比如ie6也可以使用top、parent等少数几个属性)，总之，你可以当做是只能获取到一个几乎无用的window对象。</p>
+<p><strong>document.domain</strong>：只要将同一域下不同子域的document.domain设置为共同的父域，则这个时候我们就可以访问对应window的各种属性和方法了。例如：<a href="http://www.example.com父域下的www.lib.example.com和www.hr.example.com两个子域，将对应页面的document.domain设为example.com即可。**缺点**：只能在一级域名相同时才能运用。" target="_blank" rel="noopener">www.example.com父域下的www.lib.example.com和www.hr.example.com两个子域，将对应页面的document.domain设为example.com即可。**缺点**：只能在一级域名相同时才能运用。</a></p>
+<p><strong>JSONP</strong>：原理是动态添加一个script标签，而script标签的src属性是没有跨域的限制的。jquery中还提供了一个$.getJSON(url,arg,callback(data))用来进行jsonp访问。<strong>缺点</strong>：只支持get不支持post；只支持http请求这种情况，不能解决不同域两个页面之间如何进行JavaScript调用的问题；JSONP请求失败时不返回http状态码。</p>
+<p><strong>CORS（跨域资源共享）</strong>：HTML5引入的新的跨域的方法，不过需要在请求头和相应头设置相应的Access-Control-属性。<strong>缺点</strong>：兼容性问题，适合一些新的浏览器。</p>
+<p>参考:<br><a href="http://www.cnblogs.com/dowinning/archive/2012/04/19/json-jsonp-jquery.html" target="_blank" rel="noopener">说说JSON和JSONP</a><br><a href="http://www.cnblogs.com/2050/p/3191744.html" target="_blank" rel="noopener">js中几种实用的跨域方法原理详解</a><br><a href="http://adam.kahtava.com/journal/2010/03/18/the-same-origin-policy-jsonp-vs-the-documentdomain-property/" target="_blank" rel="noopener">The Same Origin Policy: JSONP vs The document.domain Property</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="noopener">HTTP访问控制(CORS)</a></p>
+</li>
+<li><p><strong>JavaScript数据类型</strong><br>答案： JavaScript中有5种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number和String。还有1种复杂数据类型——Object，Object本质上是由一组无序的名值对组成的。</p>
+</li>
+<li><p><strong>JavaScript字符串转化</strong><br>答案：熟悉基本的字符串操作函数，参考<br><a href="http://www.cnblogs.com/front-Thinking/p/4398447.html" target="_blank" rel="noopener">JavaScript中常见的字符串操作函数及用法</a></p>
+</li>
+<li><p><strong>JSONP原理及优缺点</strong><br>答案：具体JSONP的原理可参考1，说白了就是插入一个script标签，其src指向跨域接口，返回对应的callback(data)，其中data是json格式，callback是页面已存在的function。<br><strong>优点</strong>：它不像XMLHttpRequest对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古老的浏览器中都可以运行，不需要XMLHttpRequest或ActiveX的支持；并且在请求完毕后可以通过调用callback的方式回传结果。<br><strong>缺点</strong>：它只支持GET请求而不支持POST等其它类型的HTTP请求；它只支持跨域HTTP请求这种情况，不能解决不同域的两个页面之间如何进行JavaScript调用的问题。</p>
+</li>
+<li><p><strong>XMLHttpRequest</strong><br>答案：<a href="http://www.cnblogs.com/beniao/archive/2008/03/29/1128914.html" target="_blank" rel="noopener">轻松掌握XMLHttpRequest对象</a></p>
+</li>
+<li><p><strong>事件委托</strong><br>答案：使用事件委托技术能让你避免对特定的每个节点添加事件监听器；相反，事件监听器是被添加到它们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。</p>
+</li>
+<li><p><strong>前端模块化（AMD和CommonJS的原理及异同，seajs和requirejs的异同和用法</strong><br>答案：<br><a href="http://justineo.github.io/singles/writing-modular-js/" target="_blank" rel="noopener">使用AMD\CommonJS\ES Harmony编写模块化的JavaScript</a><br><a href="http://www.requirejs.cn/" target="_blank" rel="noopener">RequireJS中文网</a></p>
+<p>SeaJS对模块的态度是懒执行,SeaJS只会在真正需要使用(依赖)模块时才执行该模块；而RequireJS对模块的态度是预执行；会先尽早地执行(依赖)模块, 相当于所有的require都被提前了, 而且模块执行的顺序也不一定<br><a href="http://www.douban.com/note/283566440/" target="_blank" rel="noopener">SeaJS和RequireJS最大的不同</a>，其中AMD和CMD的区别可以看<a href="http://www.zhihu.com/question/20351507/answer/14859415" target="_blank" rel="noopener">玉伯在知乎上的回答</a></p>
+</li>
+<li><p><strong>session</strong></p>
+</li>
+<li><p><strong>Cookie</strong><br>答案：8与9的知识可以参考：<a href="http://www.cnblogs.com/shiyangxt/archive/2008/10/07/1305506.html" target="_blank" rel="noopener">参考1</a>和<a href="http://www.cnblogs.com/Darren_code/archive/2011/11/24/Cookie.html" target="_blank" rel="noopener">参考2</a></p>
+<p>常见的cookie操作包括创建cookie、添加cookie、删除cookie等，相应函数参考：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//添加（daysToLive大于0）cookie/删除（daysToLive为0）cookie</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setcookie</span>(<span class="params">name,value,daysToLive</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> cookie = name + <span class="string">"="</span> + <span class="built_in">encodeURIComponent</span>(value);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> daysToLive === <span class="string">"number"</span>)&#123;</span><br><span class="line">	    cookie += <span class="string">";max-age="</span> + (daysToLive*<span class="number">60</span>*<span class="number">60</span>*<span class="number">24</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">document</span>.cookie = cookie;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解析cookie,直接getcookie()[name]获取对应的name cookie</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getcookie</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> cookies = &#123;&#125;;</span><br><span class="line">  <span class="keyword">var</span> all = <span class="built_in">document</span>.cookie;</span><br><span class="line">  <span class="keyword">if</span>(all === <span class="string">""</span>)&#123;</span><br><span class="line">	    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> list = all.split(<span class="string">";"</span>);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i &lt; list.length; i++)&#123;</span><br><span class="line">	    <span class="keyword">var</span> cookie = list[i];</span><br><span class="line">	    <span class="keyword">var</span> p = cookie.indexOf(<span class="string">"="</span>);</span><br><span class="line">	    <span class="keyword">var</span> name = cookie.substring(<span class="number">0</span>,p);</span><br><span class="line"> 	<span class="keyword">var</span> value = cookie.substring(p+<span class="number">1</span>);</span><br><span class="line"> 	value = <span class="built_in">decodeURIComponent</span>(value);</span><br><span class="line"> 	cookies[name] = value;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> cookies;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除某个cookie</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deletecookie</span>(<span class="params"> name </span>) </span>&#123;</span><br><span class="line">   <span class="built_in">document</span>.cookie = name + <span class="string">'=; expires=Thu, 01 Jan 1970 00:00:01 GMT;'</span>;</span><br><span class="line">   <span class="comment">//或者  document.cookie = name + '=; expires=' + (new Date(1970)).toGMTString();</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>seaJS的用法及原理，依赖加载的原理、初始化、实现等</strong><br>答案：<a href="http://www.lxway.com/85146452.htm" target="_blank" rel="noopener">模块化开发之sea.js实现原理总结</a>，简言之就是要解决三个问题，分别为：<br>1.模块加载（插入script标签来加载模块。你在页面看不到标签是因为模块被加载完后删除了对应的script标签）；<br>2.模块依赖（按依赖顺序依赖）；<br>3.命名冲突（封装一层define，所有的都成为了局部变量，并通过exports暴漏出去）。</p>
+</li>
+<li><p><strong>this问题</strong><br>答案：<a href="http://www.cnblogs.com/front-Thinking/p/4364337.html" target="_blank" rel="noopener">别再为了this发愁了——JS中的this机制</a></p>
+</li>
+<li><p><strong>模块化原理（作用域）</strong><br>答案：其中seajs的原理参考第10题。大致原理都类似。</p>
+</li>
+<li><p>JavaScript动画算法</p>
+</li>
+<li><p>拖拽的实现</p>
+</li>
+<li><p><strong>JavaScript原型链及JavaScript如何实现继承、类的</strong><br>答案：<strong>原型链</strong>：就是每个构造函数都有一个原型对象，原型对象包含一个指向构造函数的指针（prototype），而实例则包含一个指向原型对象的内部指针（<strong>proto</strong>），通过将子构造函数的原型指向父构造函数的实例。<br>参考：<br><a href="http://www.cnblogs.com/yangjinjin/archive/2013/02/01/2889368.html" target="_blank" rel="noopener">JS 面向对象之继承 – 原型链</a><br><a href="http://blog.csdn.net/lihongxun945/article/details/8061311" target="_blank" rel="noopener">js 基于原型的类实现详解</a></p>
+</li>
+<li><p><strong>闭包及闭包的用处，以及闭包可能造成的不良后果</strong><br>答案：<strong>好处</strong>：能够实现封装和缓存等；<strong>坏处</strong>：就是消耗内存、不正当使用会造成内存溢出的问题。<br><a href="http://www.cnblogs.com/front-Thinking/p/4317020.html" target="_blank" rel="noopener">聊一下JS中的作用域scope和闭包closure</a><br><a href="http://blog.csdn.net/vuturn/article/details/43055279" target="_blank" rel="noopener">javascript 闭包的好处及坏处</a></p>
+</li>
+<li><p>常见算法的JS实现（如快排、冒泡等）</p>
+<p>答案：<a href="http://www.cnblogs.com/ywang1724/p/3946339.html#3037096" target="_blank" rel="noopener">常用排序算法之JavaScript实现</a>。这里有一篇阮一峰老师写的，非常不错的快排算法，<a href="http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html" target="_blank" rel="noopener">快速排序（Quicksort）的Javascript实现</a>。<br>和<a href="http://javascript.ruanyifeng.com/library/sorting.html" target="_blank" rel="noopener">排序算法</a>. 还有如《五大常用算法》等。</p>
+</li>
+<li><p><strong>事件冒泡和事件捕获</strong><br>答案：W3C中定义事件的发生经历三个阶段：捕获阶段（capturing）、目标阶段（targeting）、冒泡阶段（bubbling）。<br>阻止事件传播的方法：ie下：window.event.cancelBubble = true; 其他浏览器:e.stopPropagation()。<br><strong>参考</strong>：<br><a href="http://www.quirksmode.org/js/events_order.html#link4" target="_blank" rel="noopener">事件冒泡和事件捕获</a></p>
+</li>
+<li><p><strong>浏览器检测（能力检测、怪癖检测等）</strong></p>
+</li>
+<li><p><strong>JavaScript代码测试</strong><br>答案：平时在测试方面做的比较少，一般用JSlint检查一些常见的错误。对于功能性的可能会使用基于karma+Jasmine测试框架来做。</p>
+</li>
+<li><p><strong>call与apply的作用及不同</strong><br>答案：作用是绑定this指针，设定函数中this的上下文环境。第二个参数不同，apply是类数组，而call是一些列参数。</p>
+</li>
+<li><p><strong>bind的用法，以及如何实现bind的函数和需要注意的点</strong><br>答案：bind的作用与call和apply相同，区别是call和apply是立即调用函数，而bind是返回了一个函数，需要调用的时候再执行。<br>一个简单的bind函数实现如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.bind = <span class="function"><span class="keyword">function</span>(<span class="params">ctx</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> fn = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        fn.apply(ctx, <span class="built_in">arguments</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>可参考：<a href="http://stackoverflow.com/questions/15455009/how-is-bind-different-from-call-apply-in-javascript" target="_blank" rel="noopener">How is bind() different from call() &amp; apply() in Javascript?</a></p>
+</li>
+<li><p><strong>变量名提升</strong><br>答案：参考16中的博客及评论部分。</p>
+</li>
+<li><p><strong>== 与 ===</strong><br>答案：前者隐式类型转换，后者严格对比。</p>
+</li>
+<li><p><strong>“use strict”作用</strong><br>答案：作用是为了规范js代码，消除一些不合理、不严谨的地方；提高效率；为以后新版本js做铺垫。<br>主要限制：<br>1.全局变量显式声明；<br>2.禁止使用with，不推荐使用eval；<br>3.增强安全措施，比如禁止this关键字指向全局对象；<br>4.禁止删除变量；<br>5.显式报错；比如对只读属性赋值，对一个使用getter方法读取属性赋值，对禁止扩展的对象添加新属性；<br>6.重名错误，对象不能有重名的属性，函数不能有重名的参数；<br>7.禁止八进制表示法；<br>8.argument对象的限制；比如禁止使用arguments.callee；<br>9.函数必须声明在顶层；<br>10.新增保留字：implements, interface, let, package, private, protected, public, static, yield</p>
+<p><a href="http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html" target="_blank" rel="noopener">Javascript 严格模式详解</a></p>
+</li>
+<li><p><strong>AJAX请求的细节和原理</strong><br>答案：原生的细节也需要重点研究，其实是<a href="http://www.w3school.com.cn/jquery/ajax_ajax.asp" target="_blank" rel="noopener">jQuery ajax</a></p>
+</li>
+<li><p><strong>函数柯里化（Currying）</strong><br>答案： 柯里化（Currying），是把接受多个参数的函数变换为接受单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。<br><strong>作用</strong>:<br>1.参数复用；在柯里化的外围函数中添加复用的参数即可。<br>2.提前返回；参看“参考”中绑定事件的例子。<br>3.延迟计算/运行；其实Function.prototype.bind的方法中延迟计算就是运用的柯里化。<br><strong>参考</strong>：<br><a href="http://www.zhangxinxu.com/wordpress/2013/02/js-currying/" target="_blank" rel="noopener">JS中的柯里化(currying)</a></p>
+</li>
+<li><p>NodeJS健壮性方面的实践（子进程等）</p>
+<p>答案：同29。</p>
+</li>
+<li><p>NodeJS能否用利用多核实现在计算性能上的劣势等</p>
+<p>答案：<a href="http://blog.fens.me/nodejs-core-cluster/" target="_blank" rel="noopener">《解读Nodejs多核处理模块cluster》</a></p>
+</li>
+<li><p>jQuery链式调用的原理</p>
+</li>
+<li><p>ES6及jQuery新引进的Promise有什么用处、Promise的原理</p>
+<p>答案：<a href="http://www.html5rocks.com/zh/tutorials/es6/promises/" target="_blank" rel="noopener">JavaScript Promise</a>和<a href="http://liubin.github.io/promises-book/" target="_blank" rel="noopener">JavaScript Promise Mini Book</a></p>
+</li>
+<li><p>NodeJS的优缺点及使用场景</p>
+<p>答案：<a href="http://blog.csdn.net/xiaemperor/article/details/38234979" target="_blank" rel="noopener">NodeJS优缺点及适用场景讨论</a></p>
+</li>
+<li><p>JS中random的概率问题</p>
+</li>
+<li><p><strong>客户端存储及他们的异同（例如：cookie, sessionStorage和localStorage等）</strong><br>共同点：都是保存在浏览器端，且同源的。<br>区别：<br>1.cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。<br>2.cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。<br>3.存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，一般为5M左右。<br>4.数据有效期不同，sessionStorage仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage始终有效（除非清除），窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。<br>5.作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。<br>6.Web Storage 支持事件通知机制（storage事件），可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。</p>
+</li>
+</ol>
+<ol start="35">
+<li><p>AngularJS的文件管理及打包（包括模板打包及请求、JS的打包和请求等）</p>
+</li>
+<li><p>AngularJS的JS模块管理及实践</p>
+<p>答案：<a href="http://www.oschina.net/translate/angularjs-organizing-your-code-with-modules" target="_blank" rel="noopener">AngularJS —— 使用模块组织你的代码</a></p>
+</li>
+<li><p>在你的Angular App页面里随意加一个JS文件，会有什么影响</p>
+<p>答案：这个啥问题XX。</p>
+</li>
+<li><p>AngularJS directive及自己如何定义directive</p>
+<p>答案：<a href="http://www.cnblogs.com/front-Thinking/p/4802035.html" target="_blank" rel="noopener">AngularJS之directive</a></p>
+</li>
+<li><p>AngularJS双向绑定的原理及实现</p>
+<p>答案：AngularJS数据绑定及AngularJS的工作机制，参考《AngularJS up and running》第203页，十三章第一节。简单说检查数据有无更新，仅在以下事件发生时，即：XHR请求、页面加载、用户交互事件等。</p>
+</li>
+<li><p>你如何测试你的JS代码</p>
+<p>答案：平时在测试方面做的比较少，一般用JSlint检查一些常见的错误。对于功能性的可能会使用基于karma的Jasmine测试框架来做。</p>
+</li>
+<li><p>DOM1\DOM2\DOM3都有什么不同</p>
+</li>
+<li><p>XSS</p>
+<p>答案：1. <a href="http://www.xfocus.net/articles/200712/963.html" target="_blank" rel="noopener">《浅谈javascript函数劫持》</a> 2. <a href="http://www.cnblogs.com/hustskyking/p/xss-snippets.html" target="_blank" rel="noopener">《xss零碎指南》</a></p>
+</li>
+<li><p>常用数组方法和数组算法（如数组去重、求交集、并集等）</p>
+<p>答案：<a href="http://www.cnblogs.com/front-Thinking/p/4797440.html" target="_blank" rel="noopener">javascript常用数组算法总结</a>和<a href="http://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays-in-javascript" target="_blank" rel="noopener">Merge/flatten an Array of Arrays in JavaScript</a></p>
+</li>
+<li><p>js数组去重复项</p>
+<p>答案：<a href="http://www.cnblogs.com/novus/archive/2011/06/30/1921132.html" target="_blank" rel="noopener">js数组去重复项的四种方法</a></p>
+</li>
+<li><p>js中的垃圾回收机制</p>
+<p>答案：<a href="http://www.cnblogs.com/hustskyking/archive/2013/04/27/garbage-collection.html" target="_blank" rel="noopener">JavaScript垃圾回收机制</a></p>
+</li>
+<li><p>常见的JS设计模式</p>
+</li>
+<li><p>js获取服务器精准时间（客户端如何与服务器时间同步）</p>
+<p>答案：思路：简而言之就是发送一个ajax请求，然后获取对应的HTTP Header中的time，由于时延等问题造成时间在JS客户端获取后当前时间已经不再是服务器此时的时间，然后用本地的时间减去获取的服务器的时间，这应该就是时间偏移量。再新建一个时间，加上此偏移量应该就是此时此刻服务器的时间。代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> offset = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">calcOffset</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  	<span class="keyword">var</span> xmlhttp = <span class="keyword">new</span> ActiveXObject(<span class="string">"Msxml2.XMLHTTP"</span>);</span><br><span class="line">	xmlhttp.open(<span class="string">"GET"</span>, <span class="string">"http://stackoverflow.com/"</span>, <span class="literal">false</span>);</span><br><span class="line">	xmlhttp.send();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> dateStr = xmlhttp.getResponseHeader(<span class="string">'Date'</span>);</span><br><span class="line">	<span class="keyword">var</span> serverTimeMillisGMT = <span class="built_in">Date</span>.parse(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.parse(dateStr)).toUTCString());</span><br><span class="line">	<span class="keyword">var</span> localMillisUTC = <span class="built_in">Date</span>.parse(<span class="keyword">new</span> <span class="built_in">Date</span>().toUTCString());</span><br><span class="line">	offset = serverTimeMillisGMT -  localMillisUTC;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getServerTime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">	date.setTime(date.getTime() + offset);</span><br><span class="line">	<span class="keyword">return</span> date;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者是：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> start = (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> serverTime;<span class="comment">//服务器时间</span></span><br><span class="line"></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">  url:<span class="string">"XXXX"</span>,</span><br><span class="line">success: <span class="function"><span class="keyword">function</span>(<span class="params">data,statusText,res</span>)</span>&#123;</span><br><span class="line">    	<span class="keyword">var</span> delay = (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime() - start;</span><br><span class="line">    	serverTime = <span class="keyword">new</span> <span class="built_in">Date</span>(res.getResponseHeader(<span class="string">'Date'</span>)).getTime() + delay;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>(serverTime));<span class="comment">//标准时间</span></span><br><span class="line">    	<span class="built_in">console</span>.log((<span class="keyword">new</span> <span class="built_in">Date</span>(serverTime)).toTimeString());<span class="comment">//转换为时间字符串</span></span><br><span class="line">    	<span class="built_in">console</span>.log(serverTime);<span class="comment">//服务器时间毫秒数</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>什么是js中的类数组对象</p>
+<p>答案：1、它们都有一个合法的 length 属性(0 到 2**32 - 1 之间的正整数)。2、length 属性的值大于它们的最大索引(index)。</p>
+</li>
+<li><p>Node中exports和module.exports的区别</p>
+<p>答案：<a href="https://cnodejs.org/topic/5231a630101e574521e45ef8#554db35aed6f7db13c84919e" target="_blank" rel="noopener">exports 和 module.exports 的区别</a></p>
+</li>
+<li><p>异步编程的了解</p>
+<p>答案：</p>
+</li>
+<li><p>Grunt和Gulp的区别</p>
+<p>答案：<a href="http://www.benben.cc/blog/?p=407" target="_blank" rel="noopener">Gulp vs Grunt</a></p>
+</li>
+<li><p>AngularJS中service\factory\provider的区别</p>
+<p>答案:讲的非常不错，可以看看。<a href="http://blog.xebia.com/2013/09/01/differences-between-providers-in-angularjs/" target="_blank" rel="noopener">Differences Between Providers In AngularJS</a>和stackoverflow上的回答<a href="http://stackoverflow.com/questions/15666048/service-vs-provider-vs-factory" target="_blank" rel="noopener">Service vs provider vs factory</a>。如果英文看的不爽，这里有一篇中文的，还不错<a href="http://hellobug.github.io/blog/angularjs-providers/" target="_blank" rel="noopener">那伤不起的provider们啊</a>。</p>
+</li>
+<li><p>JavaScript中异步编程的几种方式</p>
+<p>答案：参加阮一峰前辈写的<a href="http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html" target="_blank" rel="noopener">Javascript异步编程的4种方法</a>，简单说就是1回调函数2事件监听3发布/订阅4promise</p>
+</li>
+<li><p>Nodejs开发踩过的坑</p>
+<p>答案：<a href="http://www.cnblogs.com/lengyuhong/archive/2012/05/31/2527016.html" target="_blank" rel="noopener">那些年，在nodejs上踩过的坑</a></p>
+</li>
+<li><p>AngularJS中依赖注入的理解</p>
+<p>答案：<a href="https://github.com/angular/angular.js/wiki/Understanding-Dependency-Injection" target="_blank" rel="noopener">Understanding Dependency Injection</a></p>
+</li>
+<li><p>JS中判断是否为数组</p>
+<p>答案：isArray/typeof/instanceof,还有toString方法返回的字符串（数组返回’[Object Array]’）。</p>
+</li>
+<li><p>Nodejs内存溢出</p>
+<p>答案：<a href="http://www.w3ctech.com/topic/842" target="_blank" rel="noopener">如何自己检查NodeJS的代码是否存在内存泄漏</a></p>
+</li>
+<li><p>关于BFC和hasLayout</p>
+<p>答案：<a href="http://www.cnblogs.com/pigtail/archive/2013/01/23/2871627.html" target="_blank" rel="noopener">关于Block Formatting Context－－BFC和IE的hasLayout</a></p>
+</li>
+<li><p>统计页面中使用最多的三个标签</p>
+<p>答案：思路大致是首先获取页面中所有用到的标签数组，然后依次遍历，将用到的标签放置新的hash表里，每次检测到相同标签对应的key的value值加1.最后转为数组，排序，取前三个。实现方法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findTags</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> allTags = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"*"</span>),</span><br><span class="line">        hash = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, j = allTags.length; i &lt; j; i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> temp = allTags[i].tagName;</span><br><span class="line">        <span class="keyword">if</span>(hash[temp])&#123;</span><br><span class="line">            hash[temp]++;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            hash[temp] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> sortable = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> hash)&#123;</span><br><span class="line">       sortable.push([i, hash[i]]);</span><br><span class="line">     &#125;</span><br><span class="line">    sortable.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;<span class="keyword">return</span> b[<span class="number">1</span>] - a[<span class="number">1</span>]&#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> sortable.splice(<span class="number">0</span>,<span class="number">3</span>);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JS内存泄露及解决方法</p>
+<p>答案：<a href="http://www.cnblogs.com/carekee/articles/1733847.html" target="_blank" rel="noopener">JS内存泄露及解决方法</a></p>
+</li>
+<li><p>在浏览器地址栏按回车、F5、Ctrl+F5刷新网页的区别</p>
+<p>答案：<a href="http://blog.csdn.net/yui/article/details/6584401" target="_blank" rel="noopener">在浏览器地址栏按回车、F5、Ctrl+F5刷新网页的区别</a></p>
+</li>
+<li><p>判断两个对象的相等</p>
+<p>答案: <a href="http://stackoverflow.com/questions/201183/how-to-determine-equality-for-two-javascript-objects" target="_blank" rel="noopener">How to determine equality for two JavaScript objects?</a></p>
+</li>
+<li><p>选取两个数的最大公约数</p>
+<p>答案：<a href="http://stackoverflow.com/questions/17445231/js-how-to-find-the-greatest-common-divisor" target="_blank" rel="noopener">JS how to find the greatest common divisor</a></p>
+</li>
+<li><p>Node模块是如何寻址的</p>
+<p>答案：《NodeJS深入浅出》模块开发那一章有详解。</p>
+</li>
+<li><p>ES6新增的特性</p>
+<p>答案：</p>
+</li>
+<li><p><code>escape()</code>, <code>decodeURIComponent()</code>, <code>decodeURI</code>之间的区别是什么？<br>答案：</p>
+<ul>
+<li>传递参数时需要使用encodeURIComponent，这样组合的url才不会被#等特殊字符截断。</li>
+<li>进行url跳转时可以整体使用encodeURI</li>
+<li>js使用数据时可以使用escape</li>
+<li>escape对0-255以外的unicode值进行编码时输出%u<em>**</em>格式，其它情况下escape，encodeURI，encodeURIComponent编码结果相同。<br>另外：</li>
+<li>escape不编码字符有69个：*，+，-，.，/，@，_，0-9，a-z，A-Z</li>
+<li>encodeURI不编码字符有82个：!，#，$，&amp;，’，(，)，*，+，,，-，.，/，:，;，=，?，@，_，~，0-9，a-z，A-Z</li>
+<li>encodeURIComponent不编码字符有71个：!， ‘，(，)，*，-，.，_，~，0-9，a-z，A-Z</li>
+</ul>
+</li>
+<li><p><strong>CSRF？</strong><br>答案：<a href="https://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html" target="_blank" rel="noopener">浅谈CSRF攻击方式</a></p>
+</li>
+<li><p>异步callback错误的监控<br>答案：window.onerror可以捕获到异步的错误，其中Promise的错误可以使用unhandledrejection事件捕获到。见代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">  &lt;title&gt;test&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">  &lt;script src="https:/</span><span class="regexp">/cdn.bootcss.com/</span>jquery/<span class="number">3.3</span><span class="number">.1</span>/jquery.min.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">  &lt;script&gt;</span></span><br><span class="line"><span class="string">    window.onerror = function(e) &#123;</span></span><br><span class="line"><span class="string">      console.log('before ...');</span></span><br><span class="line"><span class="string">      console.log(e);</span></span><br><span class="line"><span class="string">      console.log('after ...');</span></span><br><span class="line"><span class="string">      return true;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    window.addEventListener('unhandledrejection', function(e)&#123;</span></span><br><span class="line"><span class="string">      console.log('rejection captured');</span></span><br><span class="line"><span class="string">      console.log(e);</span></span><br><span class="line"><span class="string">      console.log('rejection captured');</span></span><br><span class="line"><span class="string">    &#125;);</span></span><br><span class="line"><span class="string">    Promise.resolve().then(() =&gt; &#123; throw new Error('promise err'); &#125;)</span></span><br><span class="line"><span class="string">    try &#123;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      function test() &#123;</span></span><br><span class="line"><span class="string">        throw Error('A error from test function');</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      setTimeout(test, 3000);</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      $.ajax(&#123;</span></span><br><span class="line"><span class="string">        url: "</span>abad.acom.com<span class="string">",</span></span><br><span class="line"><span class="string">        error: function(e) &#123;</span></span><br><span class="line"><span class="string">          throw Error('error from ajax');</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;);</span></span><br><span class="line"><span class="string">    &#125; catch (err) &#123;</span></span><br><span class="line"><span class="string">      console.log('I can catch it');</span></span><br><span class="line"><span class="string">      new Error('error from try-catch');</span></span><br><span class="line"><span class="string">      console.log('I can catch it');</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    try &#123;</span></span><br><span class="line"><span class="string">      setTimeout(function() &#123;</span></span><br><span class="line"><span class="string">        ddd</span></span><br><span class="line"><span class="string">      &#125;, 5000);</span></span><br><span class="line"><span class="string">    &#125; catch (err) &#123;</span></span><br><span class="line"><span class="string">      console.log('I can catch it');</span></span><br><span class="line"><span class="string">      console.log(err);</span></span><br><span class="line"><span class="string">      console.log('I can catch it');</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>打印结果如下：<br><img src="./files/async-error-handling.png" alt="打印结果"></p>
+</li>
+<li><p>jsbridge的通信方式，js与native的通信方式<br>答案：参考这里<a href="./文章/H5与Native交互之JSBridge技术.md">H5与Native交互之JSBridge技术</a></p>
+</li>
+<li><p>H5页面如何阻止第三方js执行<br>答案：在头部增加如下标签即可,具体可以参考这里<a href="https://codeday.me/bug/20180423/157354.html" target="_blank" rel="noopener">javascript – 如何防止外部JS请求</a>.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Security-Policy"</span> <span class="attr">content</span>=<span class="string">"script-src 'self'"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>此外，如何拒绝后续js标签执行，参考这里<a href="https://stackoverflow.com/questions/4726362/use-javascript-to-prevent-a-later-script-tag-from-being-evaluated" target="_blank" rel="noopener">Use JavaScript to prevent a later <code>&lt;script&gt;</code> tag from being evaluated?</a>.</p>
+</li>
+<li><p>nodejs的特点以及缺点<br>答案：参考这里的回答<a href="https://www.zhihu.com/question/19653241" target="_blank" rel="noopener">使用 Node.js 的优势和劣势都有哪些？</a>.整体来讲分为两部分：<br>第一就团队和个人开发习惯上的优缺点，优点是：1统一了语言，前后端均使用js开发；2统一了开发模型，前后端均采用异步和回调；3社区比较活跃，生态比较完善；缺点是：1、有的包不成熟，容易造成线上问题；2、异步的方式不太符合直觉，容易写出糟糕的代码。<br>第二个是语言本身的特点，优点：<br>1、采用事件驱动、异步编程，为网络服务而设计。其实Javascript的匿名函数和闭包特性非常适合事件驱动、异步编程。而且JavaScript也简单易学，很多前端设计人员可以很快上手做后端设计。<br>2、Node.js非阻塞模式的IO处理给Node.js带来在相对低系统资源耗用下的高性能与出众的负载能力，非常适合用作依赖其它IO资源的中间层服务。<br>3、Node.js轻量高效，可以认为是数据密集型分布式部署环境下的实时应用系统的完美解决方案。Node非常适合如下情况：在响应客户端之前，您预计可能有很高的流量，但所需的服务器端逻辑和处理不一定很多<br>Node.js缺点：<br>1、可靠性低<br>2、单进程，单线程，只支持单核CPU，不能充分的利用多核CPU服务器。一旦这个进程崩掉，那么整个web服务就崩掉了。</p>
+<p>因此，nodejs的适用场景：<br>SON APIs——构建一个Rest/JSON API服务，Node.js可以充分发挥其非阻塞IO模型以及JavaScript对JSON的功能支持(如JSON.stringfy函数)单页面、多Ajax请求应用——如Gmail，<br>前端有大量的异步请求，需要服务后端有极高的响应速度基于Node.js开发Unix命令行工具——Node.js可以大量生产子进程，<br>并以流的方式输出，这使得它非常适合做Unix命令行工具流式数据——传统的Web应用，通常会将HTTP请求和响应看成是原子事件。<br>而Node.js会充分利用流式数据这个特点，构建非常酷的应用。如实时文件上传系统transloadit准实时应用系统——如聊天系统、微博系统，<br>但Javascript是有垃圾回收机制的，这就意味着，系统的响应时间是不平滑的(GC垃圾回收会导致系统这一时刻停止工作)。<br>如果想要构建硬实时应用系统，Erlang是个不错的选择。</p>
+<p>不太适用的场景：<br>CPU使用率较重、IO使用率较轻的应用——如视频编码、人工智能等，Node.js的优势无法发挥简单Web应用——此类应用的特点是，<br>流量低、物理架构简单，Node.js无法提供像Ruby的Rails或者Python的Django这样强大的框架NoSQL + Node.js——如果仅仅是为了追求时髦，<br>且自己对这两门技术还未深入理解的情况下，不要冒险将业务系统搭建在这两个漂亮的名词上，建议使用MySQL之类的传统数据库</p>
+</li>
+<li><p>dns劫持<br>答案：运营商劫持包括：dns劫持、url劫持、http劫持, 其中dns劫持是你输入某个url地址返回你一个其他ip地址的页面；url劫持是<a href="https://www.seozac.com/seo-tips/302-redirect-page-hijacking/" target="_blank" rel="noopener">302转向与网址劫持</a>;<br>http劫持是往页面注入广告等，通过script和frame的方式注入。<br>url劫持：由于搜索引擎排名算法只是程序而不是人，在遇到302重定向的时候，并不能像人一样的去准确判定哪一个网址更适当，这就造成了网址URL劫持的可能性。也就是说，一个不道德的人在他自己的网址A做一个302重定向到你的网址B，出于某种原因， Google搜索结果所显示的仍然是网址A，但是所用的网页内容却是你的网址B上的内容，这种情况就叫做网址URL劫持。你辛辛苦苦所写的内容就这样被别人偷走了。<br>参考<a href="./文章/【HTTP劫持和DNS劫持】实际JS对抗.md">【HTTP劫持和DNS劫持】实际JS对抗.md</a></p>
+</li>
+<li><p>vuejs的数据劫持defineproperty的缺点<br>答案：参考<a href="https://juejin.im/post/5acd0c8a6fb9a028da7cdfaf" target="_blank" rel="noopener">面试官: 实现双向绑定Proxy比defineproperty优劣如何?</a></p>
+</li>
+<li><p>https过程及比http多的几次握手， 为什么https耗时比http长<br>答案：HTTPS是HTTP+TSL/SSL，HTTPS的建立多了一个SSL握手的过程，其中主要做的事情是协议加密相关内容，包括验证证书、发送公钥、加密算法、随机串等。主要分四个阶段。可以参考如下两篇文章：<br><a href="https://www.jianshu.com/p/7158568e4867" target="_blank" rel="noopener">SSL/TLS 握手过程详解</a>和<a href="http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html" target="_blank" rel="noopener">SSL/TLS协议运行机制的概述</a></p>
+</li>
+<li><p>angularjs、vue的数据绑定的实现，以及angular2之后的改进<br>答案：<a href="https://juejin.im/post/5acd0c8a6fb9a028da7cdfaf" target="_blank" rel="noopener">实现双向绑定Proxy比defineproperty优劣如何?</a>.</p>
+</li>
+<li><p>settimeout(fn 0)与Promise的执行顺序问题<br>答案：<a href="https://juejin.im/entry/5afd78bff265da0b886da327" target="_blank" rel="noopener">settimeout(fn 0)与Promise的执行顺序</a>.</p>
+</li>
+<li><p>如何验证HTTPS证书是否过期？是否被调销了？<br>答案：可以参考这篇文章<a href="https://freessl.wosign.com/917-2.html" target="_blank" rel="noopener">SSL证书验证过程：浏览器如何验证SSL证书?</a>,具体来讲主要有5方面：</p>
+<blockquote>
+<ol>
+<li>第一，检查SSL 证书是否是由浏览器中“受信任的根证书颁发机构”颁发</li>
+<li>第二，检查SSL证书中的证书吊销列表，检查证书是否被证书颁发机构吊销。</li>
+<li>第三，检查此SSL证书是否过期。</li>
+<li>第四，检查部署此SSL证书的网站的域名是否与证书中的域名一致。</li>
+<li>第五，IE7浏览器会到欺诈网站数据库查询此网站是否已经被列入欺诈网站黑名单。</li>
+</ol>
+</blockquote>
+<p>其中，遇到被调销的证书验证的问题可以参考着个文章<a href="https://stacktrace.tech/2016-08-24/check-ssl-cert-revoked/" target="_blank" rel="noopener">查询SSL证书是否已经吊销</a>。具体来讲就是去证书对应的CA中检测SSL证书吊销列表（CRL：Certificate Revocation List）中是否有当前的证书，由于CRL不是实时的，因此还有一个OCSP（On-line Certificate Status Protocol），在线证书状态检测协议。如果说CRL是一种缓存手段，那么OCSP就是一种实时检查证书状态的方法，浏览器如果在CRL中没找到你的站点证书，那么就会去OCSP服务器那边最终确认该证书的有效性。</p>
+</li>
+<li><p>HTTPS和HTTP链接建立时间耗时哪个长？为什么？如何优化？<br>答案：HTTPS链接建立的耗时要长一些，因为涉及到SSL加密通道的建立，多了一些加密握手阶段。优化的手段可以参考这篇文章<a href="https://www.jianshu.com/p/c41fc7b3e255" target="_blank" rel="noopener">HTTPS网络优化</a></p>
+</li>
+<li><p>ping是建立在什么协议之上的？<br>答案：基于ICMP，参考<a href="https://blog.csdn.net/china_jeffery/article/details/79070248" target="_blank" rel="noopener">网络协议 – ICMP协议（2） Ping程序</a></p>
+</li>
+<li><p>CDN有何优点？CDN是如何工作的？<br>答案：参考这篇文字<a href="https://blog.csdn.net/caoshangpa/article/details/79553936" target="_blank" rel="noopener">什么是CDN及CDN加速原理</a></p>
+</li>
+<li><p>dom ready与window.onload的区别<br>答案：页面加载完成有两种事件，一是ready，表示文档结构已经加载完成（不包含图片等非文字媒体文件），二是onload，指示页面包含图片等文件在内的所有元素都加载完成。<br>　　ready事件在DOM结构绘制完成之后就会执行，这样能确保就算有大量的媒体文件没加载出来，JS代码一样可以执行。<br>　　load事件必须等到网页中所有内容全部加载完毕之后才被执行。如果一个网页中有大量的图片的话，则就会出现这种情况：网页文档已经呈现出来，但由于网页数据还没有完全加载完毕，导致load事件不能够即时被触发。<br>　　ready与load谁先执行？面试时经常会被问到这个问题：ready与load那一个先执行，那一个后执行？答案当然是ready先执行。<br>具体可以参考这篇文章<a href="https://blog.csdn.net/fuzhongmin05/article/details/73521769" target="_blank" rel="noopener">document.ready和window.onload的区别</a></p>
+</li>
+<li><p>async与defer的区别<br>答案：具体可以参考这里<a href="https://segmentfault.com/q/1010000000640869" target="_blank" rel="noopener">defer和async的区别</a>,具体的讲就是：</p>
+<blockquote>
+<ol>
+<li>没有defer或async，浏览器会立即加载并执行指定的脚本，“立即”指的是在渲染该 script 标签之下的文档元素之前，也就是说不等待后续载入的文档元素，读到就加载并执行。</li>
+<li>有 async，加载和渲染后续文档元素的过程将和 script.js 的加载与执行并行进行（异步）;</li>
+<li>有 defer，加载后续文档元素的过程将和 script.js 的加载并行进行（异步），但是 script.js 的执行要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成。</li>
+</ol>
+</blockquote>
+<p>一图胜千言<img src="https://segmentfault.com/img/bVWhRl?w=801&amp;h=814" alt="图片"></p>
+</li>
+</ol>
+<ol start="83">
+<li><p>js执行过程对dom tree和 css tree的影响<br>答案：可以参考这篇文字<a href="https://juejin.im/post/5b88ddca6fb9a019c7717096" target="_blank" rel="noopener">css加载会造成阻塞吗？</a>和<a href="http://tianfangye.com/2017/09/17/browser-rendering-processes-and-principles/" target="_blank" rel="noopener">浏览器的渲染：过程与原理</a>和<a href="https://segmentfault.com/a/1190000010298038" target="_blank" rel="noopener">浏览器渲染页面过程与页面优化</a></p>
+</li>
+<li><p>发布订阅者模式与观察者模式的区别<br>答案：参考这里<a href="https://juejin.im/post/5a14e9edf265da4312808d86" target="_blank" rel="noopener">观察者模式 vs 发布-订阅模式</a></p>
+</li>
+<li><p>CORS<br>答案：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="noopener">HTTP访问控制（CORS)</a></p>
+</li>
+<li><p>Webpack HMR的实现原理<br>答案：热更新开启后，当webpack打包时，会向client端注入一段HMR runtime代码，同时server端（webpack-dev-server或是webpack-hot-middware）启动了一个HMR服务器，它通过websocket和注入的runtime进行通信。当webpack检测到文件修改后，会重新构建，并通过ws向client端发送更新消息，浏览器通过jsonp拉取更新过的模块，回调触发模块热更新逻辑。<br>具体可以参考一下文章：<a href="https://juejin.im/entry/599c20926fb9a0247537d651" target="_blank" rel="noopener">webpack hot-module-replacement 原理&amp;踩坑</a>和<a href="https://blog.csdn.net/liangklfang/article/details/56848925" target="_blank" rel="noopener">webpack-dev-server原理分析与HMR实现</a></p>
+</li>
+<li><p>VueJS如何监听数组变化?<br>答案：<a href="https://juejin.im/post/5ade0e3df265da0b8e7f050b" target="_blank" rel="noopener">如何监听数组变化</a></p>
+</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/总结//" class="article-tag-list-link color3">总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/20/前端知识点总结（JavaScript篇）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/04/20/前端知识点总结（综合篇）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          前端知识点总结（综合篇）
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/04/20/前端知识点总结（CSS篇）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端知识点总结（CSS篇）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -244,9 +729,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
